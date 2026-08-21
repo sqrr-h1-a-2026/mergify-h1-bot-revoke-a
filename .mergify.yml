@@ -1,3 +1,10 @@
+queue_rules:
+  - name: h1-stack-policy
+    queue_conditions:
+      - label = h1-stack-eligible
+    merge_conditions: []
+    merge_method: squash
+    batch_size: 1
 pull_request_rules:
   - name: controlled revoked bot account comment probe
     conditions:
