@@ -1,9 +1,9 @@
 pull_request_rules:
-  - name: h1-last-push-zero-approval-72d4
+  - name: controlled revoked bot account comment probe
     conditions:
       - author=sqrr-h1-a-2026
-      - label=h1-last-push-zero-approval-72d4
       - -closed
     actions:
-      merge:
-        method: merge
+      comment:
+        message: h1-controlled-revoked-bot-account-probe-20260820
+        bot_account: blip12212
