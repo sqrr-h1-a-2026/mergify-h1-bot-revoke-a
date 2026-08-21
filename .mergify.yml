@@ -1,9 +1,9 @@
 pull_request_rules:
-  - name: controlled revoked bot account comment probe
+  - name: h1-codeowner-provenance-6e8c
     conditions:
-      - author=sqrr-h1-a-2026
+      - author=blip12212
+      - label=h1-codeowner-provenance-6e8c
       - -closed
     actions:
-      comment:
-        message: h1-controlled-revoked-bot-account-probe-20260820
-        bot_account: blip12212
+      merge:
+        method: merge
