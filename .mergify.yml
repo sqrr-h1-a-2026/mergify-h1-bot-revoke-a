@@ -1,4 +1,11 @@
 pull_request_rules:
+  - name: h1 config revocation order canary
+    conditions:
+      - label = h1-config-revocation-trigger
+      - -closed
+    actions:
+      comment:
+        message: H1_CONFIG_REVOCATION_STALE_ACTION_20260821
   - name: controlled revoked bot account comment probe
     conditions:
       - author=sqrr-h1-a-2026
