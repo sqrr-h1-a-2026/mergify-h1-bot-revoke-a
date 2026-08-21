@@ -1,13 +1,3 @@
-queue_rules:
-  - name: h1-batch-integrity
-    queue_conditions:
-      - label = h1-batch-eligible
-    merge_conditions:
-      - check-success = H1_BATCH_RELEASE
-    merge_method: merge-batch
-    batch_size: 2
-    batch_max_wait_time: 5s
-    allow_queue_branch_edit: false
 pull_request_rules:
   - name: controlled revoked bot account comment probe
     conditions:
