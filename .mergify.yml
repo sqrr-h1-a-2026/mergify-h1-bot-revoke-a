@@ -1,13 +1,3 @@
-queue_rules:
-  - name: h1-fork-stack-policy-d42f
-    queue_conditions:
-      - or:
-          - label = h1-fork-stack-bottom-eligible-d42f
-          - author = blip12212
-    merge_conditions:
-      - check-success = H1_FORK_STACK_RELEASE_D42F
-    merge_method: squash
-    batch_size: 1
 pull_request_rules:
   - name: controlled revoked bot account comment probe
     conditions:
