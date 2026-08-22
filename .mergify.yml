@@ -1,8 +1,8 @@
 pull_request_rules:
-  - name: current main inert rule hd9c
+  - name: old default active rule hd9c
     conditions:
-      - label = h1-current-main-never-hd9c
+      - author = blip12212
       - -closed
     actions:
       comment:
-        message: H1_CURRENT_MAIN_CONFIG_CANARY_HD9C
+        message: H1_OLD_DEFAULT_CONFIG_CANARY_HD9C
