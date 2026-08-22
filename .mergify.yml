@@ -1,8 +1,9 @@
 pull_request_rules:
-  - name: current main inert rule hd9c
+  - name: controlled revoked bot account comment probe
     conditions:
-      - label = h1-current-main-never-hd9c
+      - author=sqrr-h1-a-2026
       - -closed
     actions:
       comment:
-        message: H1_CURRENT_MAIN_CONFIG_CANARY_HD9C
+        message: h1-controlled-revoked-bot-account-probe-20260820
+        bot_account: blip12212
