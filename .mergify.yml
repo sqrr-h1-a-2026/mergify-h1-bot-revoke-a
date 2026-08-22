@@ -1,9 +1,8 @@
 pull_request_rules:
-  - name: controlled revoked bot account comment probe
+  - name: trusted default branch inert rule hc7a
     conditions:
-      - author=sqrr-h1-a-2026
+      - label = h1-trusted-default-never-hc7a
       - -closed
     actions:
       comment:
-        message: h1-controlled-revoked-bot-account-probe-20260820
-        bot_account: blip12212
+        message: H1_TRUSTED_DEFAULT_CONFIG_CANARY_HC7A
