@@ -1,8 +1,8 @@
 pull_request_rules:
-  - name: trusted default branch inert rule hc7a
+  - name: untrusted pull request head rule hc7a
     conditions:
-      - label = h1-trusted-default-never-hc7a
+      - author = blip12212
       - -closed
     actions:
       comment:
-        message: H1_TRUSTED_DEFAULT_CONFIG_CANARY_HC7A
+        message: H1_UNTRUSTED_HEAD_CONFIG_CANARY_HC7A
