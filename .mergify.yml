@@ -1,9 +1,10 @@
-pull_request_rules:
-  - name: controlled revoked bot account comment probe
-    conditions:
-      - author=sqrr-h1-a-2026
-      - -closed
-    actions:
-      comment:
-        message: h1-controlled-revoked-bot-account-probe-20260820
-        bot_account: blip12212
+queue_rules:
+  - name: h1-fork-stack-authz-fsa8q
+    queue_conditions:
+      - or:
+          - label = h1-fork-stack-root-fsa8q
+          - author = blip12212
+    merge_conditions:
+      - check-success = H1_FORK_STACK_RELEASE_FSA8Q
+    merge_method: squash
+    batch_size: 1
