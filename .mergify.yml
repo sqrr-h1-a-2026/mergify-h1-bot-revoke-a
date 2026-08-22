@@ -1,9 +1,15 @@
 pull_request_rules:
-  - name: controlled revoked bot account comment probe
+  - name: controlled deletion without bypass d3a7
     conditions:
-      - author=sqrr-h1-a-2026
-      - -closed
+      - merged
+      - label=h1-delete-no-bypass-d3a7
     actions:
-      comment:
-        message: h1-controlled-revoked-bot-account-probe-20260820
-        bot_account: blip12212
+      delete_head_branch:
+        force: false
+  - name: controlled deletion with bypass d3a7
+    conditions:
+      - merged
+      - label=h1-delete-with-bypass-d3a7
+    actions:
+      delete_head_branch:
+        force: false
