@@ -1,9 +1,9 @@
-pull_request_rules:
-  - name: controlled revoked bot account comment probe
-    conditions:
-      - author=sqrr-h1-a-2026
-      - -closed
-    actions:
-      comment:
-        message: h1-controlled-revoked-bot-account-probe-20260820
-        bot_account: blip12212
+queue_rules:
+  - name: h1-native-stack-ns83
+    queue_conditions:
+      - label = h1-native-stack-admit-ns83
+    merge_conditions:
+      - check-success = H1_NATIVE_STACK_RELEASE_NS83
+    branch_protection_injection_mode: merge
+    merge_method: squash
+    batch_size: 1
