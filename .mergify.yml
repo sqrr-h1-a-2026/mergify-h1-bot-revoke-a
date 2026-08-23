@@ -1,9 +1,16 @@
 pull_request_rules:
-  - name: controlled revoked bot account comment probe
+  - name: controlled update first um47
     conditions:
-      - author=sqrr-h1-a-2026
+      - label = h1-workflow-update-merge-um47
+      - "#commits-behind > 0"
       - -closed
     actions:
-      comment:
-        message: h1-controlled-revoked-bot-account-probe-20260820
-        bot_account: blip12212
+      update:
+  - name: controlled merge from same old state um47
+    conditions:
+      - label = h1-workflow-update-merge-um47
+      - check-success = H1_UPDATE_MERGE_GUARD_um47
+      - -closed
+    actions:
+      merge:
+        method: squash
